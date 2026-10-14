@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROYAL VOWS</title>
+
+
+    <style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        scroll-behavior: smooth;
+    }
+    html{
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+    body {
+        width: 100%;
+        min-height: 100vh;
+        font-family:playfair display;
+       
+        overflow-x: hidden;
+
+    }
+    .header{
+        position: fixed;
+        z-index:1000;
+        display: flex;
+        gap:30px;
+        background-color:gold;
+        overflow-x: hidden;
+        width: 100%;
+        max-height: 70px;
+    }
+    .header .img img{
+        width: 70px;
+        height: 70px;
+        margin-left: 5px;
+        margin-top: 0px;
+
+    }
+    .header .img img:hover{
+        transform: scale(1.1);
+        transition: 0.3s;
+    }
+
+    .header .slogan{
+        margin-top:30px;
+        margin-left:20px;
+        line-height: 25px;
+    }
+    .header .slogan p:hover{
+        transform: scale(1.1);
+        transition: 0.3s;
+
+    }
+
+    .header .nav{
+      
+        margin-top: -30px;
+        display: flex;
+        flex-direction: row;
+        gap:20px;
+        font-size: 20px;
+        margin-left: 500px;
+       
+        
+        
+    }
+     .header .nav a{
+        color:rgb(24, 19, 19);
+     }
+
+
+
+     .header .nav a:hover{     
+        transform: scale(1.1);
+        transition: 0.3s;
+        color:rgba(163, 18, 18, 0.795);
+     }
+     .home{
+        display: flex;
+        position: relative;
+       
+        width: 100%;
+        min-height:100vh;
+        align-items: center;
+        overflow: hidden;
+         }
+
+     .home .img {
+        position: absolute;
+        inset:0;
+        z-index: 0;
+     }
+     .home .img:hover{
+        transform: scale(1.1);
+        transition: 0.3s;
+     }
+     .home .content{
+        margin-left: 55%;
+        z-index:1;
+        margin-top:0%
+
+     }
+
+     .home .content .book{
+        padding:15px 50px;
+        background-color: gold;
+        color: black;
+        border-radius: 10px;
+        font-size: 20px;
+
+     }
+      .home .content .book:hover{
+        transition: 0.3s;
+        transform: scale(1.1);
+        
+        
+      }
+       .home .content .Explore{
+        padding:15px 50px;
+        background-color: rgb(219, 6, 6);
+        color: black;
+        border-radius: 10px;
+        font-size: 20px;
+
+     }
+      .home .content .Explore:hover{
+        transition: 0.3s;
+        transform: scale(1.1);
+      
+        
+      }
+
+      .services{
+         background-color:rgb(250, 243, 243);
+         min-height: 100vh;
+      }
+
+      .services .heading{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .services-divs{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap:25px;
+        
+       
+      }
+      .services-divs .service
+      {
+        border: 3px solid black;
+        
+        border-radius: 25px;
+
+
+
+      }
+      .services-divs .service:hover{
+        background-color: gold;
+        color: black;
+        transform: scale(1.1);
+        transition: 0.3s;
+        
+
+      }
+       .services-divs .service symbol{
+        font-size: 40px; 
+       }
+       .services-divs .service h3{
+            font-size: larger;
+            line-height: 1.5;
+            color: black;
+        }
+
+        .services-divs .service p{
+            font-size: larger;
+            line-height: 1.5;
+            color: darkorange;
+        }
+        .services-divs .service a{
+            font-size: large;
+
+        }
+
+        .gallary{
+            width: 100px;
+
+        }
+
+        .gallary {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+           
+            background-color: goldenrod;
+            width: 100%;
+        }
+
+         .gallary img{
+            height:70%;
+            object-fit: cover;
+             row-gap:15px;
+            column-gap: 30px;
+            margin-left: 60px;
+            margin-top:30px;
+           
+         }
+
+        .gallary img:hover{
+            transform: scale(1.1);
+            transition: 0.3s;
+            border: 3px solid gold;
+        }
+
+        .testimonials{
+            margin-top: -40px;
+        }
+
+        .testimonials .heading{
+            text-align: center;
+        }
+
+        .testimonials .testall{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap:10px;
+            margin-left: 30px;
+
+
+        }
+        .testimonials .testall .box{
+            border:3px solid gold;
+            line-height: 1.7;
+            font-size: 15px;
+            font-family: cursive;
+              border-radius: 30px;
+              height: 150px;
+              width: 350px;
+              padding: 10px 30px;
+        }
+        .testimonials .testall .box{
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+
+        .testimonials .testall .box p{
+            color:gold;
+        }
+        .testimonials .testall .box p:hover{
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+         .testimonials{
+            background-color:black;
+            color:bisque;
+        }
+
+        .package{
+            height: 100vh;
+            background-color: red;
+        }
+
+
+       
+        .package .heading{
+            text-align: center;
+        }
+
+        .package .packall {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+             gap:60px;
+             margin-left: 50px;
+             margin-right: 50px;
+            
+        }
+          .package .packall .box{
+            line-height: 2.2;
+            font-size: larger;
+            border: 3px solid gold;
+             border-radius: 30px;
+             background-color:silver;
+           
+          }
+           .package .packall .box:hover{
+            transform: scale(1.1);transition: 0.3s;
+           }
+
+          .package .packall .gold{
+            line-height: 2.2;
+            font-size: larger;
+            background-color: goldenrod;
+             border-radius: 30px;
+             border-color: black;
+
+          }
+           .package .packall .gold:hover{
+            transform: scale(1.1);transition: 0.3s;
+           }
+
+           .testimonials .testall .box h3{
+            color:deeppink;
+            font-size:larger;
+           }
+
+
+           .contact{
+            max-height: 50vh;
+            display: flex;
+          
+           
+            background-color: gold;
+            width: 100%;
+           }
+
+           .contact .details{
+            width: 50%;
+            margin-left:5%;
+           }
+
+           .contact .map iframe{
+            width: 150%;
+            height: 100%;
+            margin-top: -70px;
+            
+           }
+            
+
+        
+
+
+   
+
+        </style>
+</head>
+<body>
+    <header>
+        <section class="header">
+            <div class="img">
+                <img src="wedd.png"   alt="wedding img">
+            </div>
+            <div class="slogan">
+                <h2>ROYAL VOWS</h2>
+               
+            <div class="nav">
+                <a href="#home">Home</a>
+              
+                <a href="#services">Services</a>
+                  
+                
+                <a href="#gallary">Gallery</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#pacakge">Packages</a>
+                <a href="#contact">Contact us</a>
+                <a href="#contact"><img src="wat.jpg" style="margin-top:-10px;width: 50px; height: 50px;"></a>
+ </div>
+        </section>
+    </header>
+
+    <section class="home" id="home">
+
+    <div class="img">
+        <img src="wedding home.jpeg" alt="Royal Wedding">
+    </div>
+
+    <div class="content">
+        <h1 style="color:rgb(185, 169, 75)">Welcome to Royal Vows</h1><br><br>
+
+        <h2 style="color:red">Where Dreams Become Forever</h2><br><br>
+
+        <p style="line-height:1.9; font-size: 25px;">
+            We create unforgettable wedding experiences with elegance,
+            luxury, and timeless traditions. From grand royal ceremonies
+            to intimate celebrations, we make every moment magical.
+        </p><br><br>
+
+        <button class="book" >Book Your Wedding</button>&nbsp;&nbsp;&nbsp;
+        <button class="Explore">Explore Our Services</button><br><br>
+     
+    </div>
+
+</section>
+
+
+<section class="services" id="services">
+    
+
+    <div class="heading">
+        <br><br>
+          <h2 style="font-size: 30px;color: rgb(150, 150, 13);">Our Royal Services</h2><br><br>
+        <b><p style="font-size: 25px;color:red"">Creating timeless weddings filled with elegance, love, and unforgettable memories.</p>
+   </b> <br><br></div>
+
+   
+    <div class="services-divs">
+
+        <div class="service">
+           <center><symbol>💍</symbol><br><br>
+            <h3> Wedding Planning</h3><br><br>
+            <p>From the first idea to the final celebration, we plan every detail of your dream wedding.</p>
+            <br><br><a href="#contact">Learn More →</a>
+        <br><br></center> </div>
+
+        <div class="service">
+            <center><symbol>👑</symbol><br><br>
+            <h3> Luxury Weddings</h3><br><br>
+            <p>Experience royal celebrations with luxurious decorations and exceptional arrangements.</p>
+           <br><br> <a href="#contact">Learn More →</a>
+        <br><br></center></div>
+
+        <div class="service">
+            <center><symbol>🌸</symbol><br><br>
+            <h3> Wedding Decoration</h3><br><br>
+            <p>Transform your venue with beautiful floral arrangements and elegant wedding themes.</p>
+           <br><br> <a href="#contact">Learn More →</a>
+       <br><br> </center></div>
+
+        <div class="service">
+            <center><symbol>📸</symbol><br><br>
+            <h3> Photography</h3><br><br>
+            <p>Capture every beautiful moment and preserve your precious wedding memories forever.</p>
+            <br><br><a href="#contact">Learn More →</a>
+        <br><br></center> </div>
+
+        <div class="service">
+            <center><symbol>🎉</symbol> <br><br>
+            <h3> Reception Planning</h3><br><br>
+            <p>Celebrate your special day with stunning stage designs, entertainment, and flawless coordination.</p>
+            <br><br>
+            <a href="#contact">Learn More →</a>
+       <br><br> </center> </div>
+
+        <div class="service">
+            <center><symbol>🍽️</symbol><br><br>
+            <h3> Catering Services</h3><br><br>
+            <p>Delight your guests with delicious menus and exceptional dining experiences.</p>
+           <br><br> 
+           <a href="#contact">Learn More →</a>
+        <br><br></center> </div><br><br><br>
+
+    </div>
+
+</section>
+
+<section class="gallary" id="gallary">
+
+
+    
+    <img src="d.jpg">
+    <img src="de.jpg">
+    <img src="h.jpg">
+    <img src="l.jpg">
+      <img src="m.jpg">
+        <img src="mar.jpg">
+
+</section>
+
+<section class="testimonials" id="testimonials">
+
+    <div class="heading">
+        <h1 style="color: gold;">Our Happy Couples</h1><br><br>
+        <p style="font-size: 20px;color: red;">What They Say About Royal Vows</p><br><br>
+    </div>
+
+    <div class="testall">
+
+        <div class="box">
+            <h3>Arun & Priya</h3>
+            <p>"Royal Vows made our wedding beautiful and memorable. Everything was perfectly organized!"</p>
+            <div class="stars">★★★★★</div>
+        </div>
+
+        <div class="box">
+            <h3>Rahul & Sneha</h3>
+            <p>"The decorations were stunning, and the team made our special day stress-free!"</p>
+            <div class="stars">★★★★★</div>
+        </div>
+
+        <div class="box">
+            <h3>Karthik & Divya</h3>
+            <p>"Excellent planning, wonderful service, and a truly royal wedding experience!"</p>
+            <div class="stars">★★★★☆</div>
+        </div>
+
+    </div>
+<br><br><br><br>
+</section>
+
+<section class="package" id="pacakge">
+
+    <div class="heading">
+        <h1 style="color: gold;">Our Wedding Packages</h1><br><br>
+        <p style="font-size:20px; color: red;">Choose the Perfect Package for Your Dream Wedding</p><br><br>
+
+    <div class="packall">
+
+        
+        <div class="box">
+            <h2>Silver Package</h2>
+            <h3>₹1,50,000</h3>
+
+            <p>✔ Wedding Planning</p>
+            <p>✔ Basic Stage Decoration</p>
+            <p>✔ Floral Decoration</p>
+            <p>✔ Photography</p>
+            <p>✔ Guest Coordination</p>
+
+            <a href="#contact">Book Now →</a>
+        </div>
+
+        <div class="gold">
+            <h2>Gold Package</h2>
+            <h3>₹3,00,000</h3>
+
+            <p>✔ Complete Wedding Planning</p>
+            <p>✔ Premium Stage Decoration</p>
+            <p>✔ Photography & Videography</p>
+            <p>✔ Catering Arrangements</p>
+            <p>✔ Reception Planning</p>
+
+            <a href="#contact">Book Now →</a>
+        </div>
+
+  
+        <div class="box">
+            <h2>Platinum Package</h2>
+            <h3>₹5,00,000</h3>
+
+            <p>✔ Luxury Wedding Planning</p>
+            <p>✔ Royal Theme Decoration</p>
+            <p>✔ Premium Photography</p>
+            <p>✔ Luxury Catering Arrangements</p>
+            <p>✔ Complete Event Management</p>
+
+            <a href="#contact">Book Now →</a>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="contact" id="contact">
+
+    <div class="details">
+
+        <br><br>
+        <h1>Contact us</h1><br>
+        <h2>ROYAL VOWS</h2><br>
+        <p>Luxury Wedding Planners</p><br>
+
+        <p>📍 Erode, Tamil Nadu, India</p><br>
+        <p>📞 +91 99443 54822</p><br>
+        <p>✉️ info@royalvows.com</p><br>
+    </div>
+
+    <div class="map">
+        <br><br><br><br>
+        <iframe
+            src="https://maps.google.com/maps?q=Erode,Tamil%20Nadu,India&output=embed"
+            width="100%"
+            height="350"
+            style="border:0;"
+            loading="lazy"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+</section>
+
+
+
+
+</body>
+</html>
